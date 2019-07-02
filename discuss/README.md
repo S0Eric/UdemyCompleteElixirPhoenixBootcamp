@@ -20,7 +20,7 @@ Ready to run in production? Please [check our deployment guides](http://www.phoe
   * Source: https://github.com/phoenixframework/phoenix
 
 
-## Eric's Notes
+## Eric's Notes - Setup
 
 * Create project: `mix phoenix.new discuss`
 * Create Postgres DB: `mix ecto.create`
@@ -29,3 +29,7 @@ Ready to run in production? Please [check our deployment guides](http://www.phoe
 * Start Phoenix server: `mix phoenix.server`
 * Pheonix uses Bootstrap by default. Go to `materializecss.com`, click `GET STARTED`, and copy `<link>` tag and add it to `templates/layout/app.html.eex`. Material Design is more modern looking.
 * To experiment invoking methods directly, start the Phoenix server in the command shell: `iex -S mix phoenix.server`
+
+## Eric's Notes - Database Migration
+* To create first migration - create topics table: `mix ecto.gen.migration add_topics`. Then open `privs/migrations/yyyymmddhhmmss.exs` and add the required code to modify the DB.
+* To run migration(s): `mix ecto.migrate`
